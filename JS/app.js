@@ -1,13 +1,13 @@
-function addTwoNumbers(num1, num2) {
+function addValues(num1, num2) {
     return num1 + num2;
 }
 
-const firstResult = addTwoNumbers(5, 5);
+const firstResult = addValues(24, 24);
+const secondResult = addValues(45, 55);
 
-const add = (num1, num2) => {
+const add = function addValuesInLine(num1, num2) {
     return num1 + num2;
 }
 
-const seondResult = add(5, 5);
-
-console.log(firstResult, add(5, 5));
+const results = [firstResult, secondResult];
+console.log(results);
