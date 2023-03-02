@@ -1,13 +1,16 @@
-function addValues(num1, num2) {
-    return num1 + num2;
+const person = {
+    name: 'John',
+    lastName: 'Peters',
+    age: 40,
+    education: true,
+    married: false,
+    siblings: ['anna', 'peter', 'susan'],
+    greeting: function sayHello() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
 }
+console.log(person.name);
+person.greeting();
 
-const firstResult = addValues(24, 24);
-const secondResult = addValues(45, 55);
-
-const add = function addValuesInLine(num1, num2) {
-    return num1 + num2;
-}
-
-const results = [firstResult, secondResult];
-console.log(results);
+person.name = 'bob';
+person.greeting();
