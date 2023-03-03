@@ -1,16 +1,18 @@
-const person = {
-    name: 'John',
-    lastName: 'Peters',
-    age: 40,
-    education: true,
-    married: false,
-    siblings: ['anna', 'peter', 'susan'],
-    greeting: function sayHello() {
-        console.log(`Hello, my name is ${this.name}`);
-    }
+function morning(name) {
+    return `Good morning ${name.toUpperCase()}`;
 }
-console.log(person.name);
-person.greeting();
 
-person.name = 'bob';
-person.greeting();
+function greet(name, callback) {
+    const myName = 'John';
+    console.log(`${callback(name)}, my name is ${myName}`);
+}
+
+greet('bobo', morning);
+
+
+// function greetMorning(name) {
+//     const myName = `john`;
+//     console.log(`Goodmorning ${name} my name is ${myName}`);
+// }
+// greetMorning('bobo');
+
