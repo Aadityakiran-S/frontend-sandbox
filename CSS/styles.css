@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-.relative{
-    font-size: 2em;
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+h1{
+    font-family: 'Climate Crisis', cursive;
 }
 
-.absolute{
-    font-size: 32px;
-=======
-*{
-    margin: 0;
-}
-
-.navbar{
-    background-color: blue;
-    height: 100px;
-    color: white;
-    font-size: 3rem;
-}
-.banner{
-    background-color: red;
-    min-height: calc(100vh - 100px);
->>>>>>> ada4d49a73512d904f965984f7a3dfec6906f0a3
-}
+/* font stack */
