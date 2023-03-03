@@ -1,18 +1,11 @@
-function morning(name) {
-    return `Good morning ${name.toUpperCase()}`;
+const people = [
+    { name: 'bob', age: 20, profession: 'developer' },
+    { name: 'peter', age: 25, profession: 'designer' },
+    { name: 'susy', age: 30, profession: 'the boss' }
+]
+
+function showPerson(person) {
+    console.log(person.profession.toUpperCase());
 }
 
-function greet(name, callback) {
-    const myName = 'John';
-    console.log(`${callback(name)}, my name is ${myName}`);
-}
-
-greet('bobo', morning);
-
-
-// function greetMorning(name) {
-//     const myName = `john`;
-//     console.log(`Goodmorning ${name} my name is ${myName}`);
-// }
-// greetMorning('bobo');
-
+people.forEach(showPerson);
