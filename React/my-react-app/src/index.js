@@ -1,8 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDom from 'react-dom';
 
+//Must capitalize functions for React to know it's supposed to be used
 function Greeting() {
-  return <h1>Hello World!</h1>
+  return <h1>Hello there!</h1>
 }
 
-ReactDOM.render(<Greeting></Greeting>, document.getElementById('root'));
+ReactDom.render(<Greeting></Greeting>, document.getElementById('root'));
