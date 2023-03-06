@@ -1,20 +1,10 @@
-*{
-    margin: 0px;
-}
-
-h1{
-    background-color: red;
-    /* padding-top: 30px;
-    padding-left: 20px;
-    padding-bottom: 30px;
-    padding-right: 20px; */
-    padding: 20px;
-    /* margin-bottom: 0px; */
-}
-p{
+.block{
     background-color: blue;
-    padding: 20px;
-    /* margin-top: 0px; */
-    /* padding: 30px 60px; */
-    /* padding: 20px 40px 60px 10px; */
+    color: white;
+    display: inline;
+}
+.inline{
+    background: red;
+    color: white;
+    display: block;
 }
