@@ -1,25 +1,44 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-const App = () => {
+const BookList = () => {
   return (
-    <div>
-      <Heading />
-      <Paragraph />
-    </div>
+    <section>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   );
 }
 
-const Heading = () => {
+const Book = () => {
   return (
-    <h1>Hello World</h1>
+    <article>
+      <Title />
+      <Image />
+      <br />
+      {/* By that Author, pretty hard to do but useless */}
+      <div>
+        <p style={{ display: 'inline-block', marginRight: '0.25em' }}>by</p>
+        <div style={{ display: 'inline-block' }}><Author /></div>
+      </div>
+    </article>
   );
 }
-const Paragraph = () => {
+
+const Image = () => {
   return (
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quod numquam nihil distinctio dignissimos possimus autem similique, quasi qui fugit aliquam eaque libero saepe ad quae adipisci minus consectetur omnis dolorem facere optio. Voluptate et provident explicabo nihil nemo sequi similique, dolorum illum voluptas fugiat quia consectetur veritatis ex quae!</p>
+    <img src="https://m.media-amazon.com/images/I/91hIsjFuICL.jpg" width={'50%'} alt="book image" />
   );
 }
+
+const Title = () => <h1>I love you to the moon and back</h1>;
+const Author = () => <h4>Amelia Hepworth</h4>;
 
 //injecting to index.html
-ReactDom.render(<App />, document.getElementById('root'));
+ReactDom.render(<BookList />, document.getElementById('root'));
