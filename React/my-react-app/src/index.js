@@ -1,28 +1,25 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-//This is a stateless functional component and this has to be declared in caps
-// function Greeting() {
-//   return React.createElement('h1', {}, 'hello World');
-//  //Don't wanna do like this. Pretty complicated.
-// }
-
-//JSX rules
-// return single element
-// div/ section / article or Fragment
-// user camelCase for html attributes
-// className instead of class
-// clse every element (duh! right?)
-// formatting
-
-const Greeting = () => {
+const App = () => {
   return (
     <div>
-      <h1>Hello World</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in iure cumque incidunt nulla dolore placeat quaerat dicta numquam commodi.</p>
+      <Heading />
+      <Paragraph />
     </div>
   );
 }
 
+const Heading = () => {
+  return (
+    <h1>Hello World</h1>
+  );
+}
+const Paragraph = () => {
+  return (
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quod numquam nihil distinctio dignissimos possimus autem similique, quasi qui fugit aliquam eaque libero saepe ad quae adipisci minus consectetur omnis dolorem facere optio. Voluptate et provident explicabo nihil nemo sequi similique, dolorum illum voluptas fugiat quia consectetur veritatis ex quae!</p>
+  );
+}
+
 //injecting to index.html
-ReactDom.render(<Greeting />, document.getElementById('root'));
+ReactDom.render(<App />, document.getElementById('root'));
