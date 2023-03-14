@@ -26,7 +26,7 @@ const BookList = () => {
 const Book = () => {
   return (
     <article className='book '>
-      <h1>{title}</h1>
+      <h1>{title.toUpperCase()}</h1>
       <img src={imageURL} width={'50%'} alt="image" />
       <br />
       <div>
