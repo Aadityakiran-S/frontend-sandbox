@@ -22,6 +22,7 @@ body {
 @media screen and (min-width: 768px) {
   .bookList {
     grid-template-columns: repeat(3, 1fr);
+    align-items: start;
   }
 }
 
@@ -31,6 +32,14 @@ body {
   padding: 1rem 2rem;
 }
 
+/* This is the title */
 .book h1 {
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.7rem;
+}
+
+/* This is the author */
+.book h4 {
+  color: #617d98;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
 }
