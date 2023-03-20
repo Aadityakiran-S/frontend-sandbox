@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import { createRoot } from 'react-dom/client';
 
 //CSS
@@ -8,25 +7,31 @@ import './index.css'; //Just grabbing everything
 //variables
 const books = [
   {
+    id: 1,
     title: `I love you to the moon and back`,
     author: `Amelia Hepworth`,
     image: `https://m.media-amazon.com/images/I/91hIsjFuICL.jpg`
   },
   {
+    id: 2,
     title: "Grandma's bag of stories",
     author: "Sudha Murthy",
     image: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/61yB0UFlM3L._SY344_BO1,204,203,200_.jpg"
   },
+  {
+    id: 3,
+    title: "The Vanishing Half",
+    author: "Brit Bennett ",
+    image: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/41tesqOC72L._AC_UY218_.jpg",
+  },
 ]
 
-const names = ['john', 'susan', 'peter'];
-const newNames = names.map((entry) => {
-  return <h1>{entry}</h1>
-})
 const BookList = () => {
   return (
     <section className='bookList'>
-      {newNames}
+      {books.map((book) => {
+        return (<Book key={book.id} {...book}></Book>);
+      })}
     </section>
   );
 }
@@ -48,5 +53,4 @@ const Book = (props) => {
 
 //injecting to index.html
 const root = document.getElementById('root');
-createRoot(root).render(<BookList />)
-// ReactDom.render(<BookList />, document.getElementById('root'));
+createRoot(root).render(<BookList />);
