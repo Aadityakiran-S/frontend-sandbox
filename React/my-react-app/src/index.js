@@ -1,28 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-function Greeting() {
+function BookList() {
     return (
-        <>
-            <h3 className='someValue'>My first component</h3>
-            <Person />
-            <Message />
-        </>
+        <section>
+            <Book />
+            <Book />
+            <Book />
+            <Book />
+        </section>
     );
 }
 
-const Person = () => <h2>John Doe</h2>;
-const Message = () => { return <h2>This is my message</h2>; }
+function Book() {
+    return (
+        <article>
+            <Image />
+            <Title />
+            <Author />
+        </article>
+    );
+};
 
-// // React component using "createElement"
-// function Greeting() {
-//     return React.createElement(
-//         'div',
-//         {},
-//         React.createElement('h1', {}, 'Hello World')
-//     );
-// }
+const Image = () => <img src="https://m.media-amazon.com/images/I/71g2ednj0JL._AC_UL400_.jpg" alt="Psychology of Money" />;
+const Title = () => <h2>Psychology of Money</h2>;
+const Author = () => <h4>Morgan Housel</h4>;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Greeting />)
+root.render(<BookList />)
