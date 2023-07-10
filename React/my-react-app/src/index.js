@@ -6,17 +6,15 @@ import './index.css';
 function Greeting() {
     return (
         <>
-            <div>
-                <h3>Hello People</h3>
-                <ul>
-                    <li>
-                        <a href="#">hello world</a>
-                    </li>
-                </ul>
-            </div>
-            <h2>Hello World</h2>
+            <Person />
+            <Message />
         </>
     );
+}
+
+const Person = () => <h2>John Doe</h2>;
+const Message = () => {
+    return <p>This is my message...</p>;
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
