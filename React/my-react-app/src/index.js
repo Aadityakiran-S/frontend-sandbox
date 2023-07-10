@@ -3,19 +3,31 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
-function Greeting() {
+const BookList = () => {
     return (
         <>
-            <Person />
-            <Message />
+            <Book></Book>
+            <Book></Book>
+            <Book></Book>
+            <Book></Book>
         </>
     );
 }
 
-const Person = () => <h2>John Doe</h2>;
-const Message = () => {
-    return <p>This is my message...</p>;
+//#region  Components
+const Book = () => {
+    return (
+        <article>
+            <Image></Image>
+            <Title></Title>
+            <Author></Author>
+        </article>
+    );
 }
+const Image = () => <img src="https://m.media-amazon.com/images/I/71hwUY5ZmxL._AC_UY218_.jpg" alt="Interesting Facts For Curious Minds" />;
+const Title = () => <h2>Interesting Facts For Curious Minds</h2>;
+const Author = () => <h4>Jordan Moore</h4>;
+//#endregion
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Greeting />);
+root.render(<BookList />);
