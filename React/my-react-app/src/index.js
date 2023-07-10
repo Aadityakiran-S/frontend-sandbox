@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
-function BookList() {
+function Greeting() {
     return (
         <>
             <div>
@@ -14,6 +14,7 @@ function BookList() {
                     </li>
                 </ul>
             </div>
+            <h2>Hello World</h2>
         </>
     );
 }
