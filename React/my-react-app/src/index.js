@@ -5,19 +5,19 @@ import './index.css';
 
 const BookList = () => {
     return (
-        <>
+        <section className='booklist'>
             <Book></Book>
             <Book></Book>
             <Book></Book>
             <Book></Book>
-        </>
+        </section>
     );
 }
 
 //#region  Components
 const Book = () => {
     return (
-        <article>
+        <article className='booklist'>
             <Image></Image>
             <Title></Title>
             <Author></Author>
